@@ -40,7 +40,7 @@ function setup() {
   for (let i = 0; i < cols; i++) {
     grid[i] = [];
     for (let j = 0; j < rows; j++) {
-      grid[i][j] = color(255);
+      grid[i][j] = color(65);
     }
   }
 }
@@ -59,13 +59,15 @@ function draw() {
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       fill(grid[i][j], 100, 100);
+      stroke(68, 100, 100);
       rect(i * size, j * size, size, size);
     }
   }
 
   // Draw all text points
-  fill(0, 100, 100);
-  stroke(120, 100, 100);
+  fill(0, 0, 0);
+  strokeWeight(0.5);
+  stroke(302, 76, 95);
   
   for (let obj of pointsArray) {
     for (let pt of obj.points) {
